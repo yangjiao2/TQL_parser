@@ -30,20 +30,16 @@ MySQL Query (translated):
 
 > SELECT obs.*
 > FROM (
->
 > SELECT observation_collection1.*  FROM Observation AS observation_collection1
 > INNER JOIN ( 
 >
 >	SELECT sen.* FROM Sensor AS sen
 >	INNER JOIN 
->
 >   	Sen_Infr AS sen_Sen_Infr ON sen.id = sen_Sen_Infr.sen_id
 > 	INNER JOIN 
->
 >		Infrastructure AS sen_Sen_Infr_Infrastructure 
 >		ON sen_Sen_Infr.infr_id = sen_Sen_Infr_Infrastructure.id
 >		INNER JOIN 
->
 >			Region AS sen_Sen_Infr_Infrastructure_Region 
 >			ON sen_Sen_Infr_Infrastructure.reg_id = sen_Sen_Infr_Infrastructure_Region.id
 >
