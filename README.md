@@ -40,6 +40,7 @@ MySQL Query (translated):
 > 	INNER JOIN 
 >		Infrastructure AS sen_Sen_Infr_Infrastructure 
 >		ON sen_Sen_Infr.infr_id = sen_Sen_Infr_Infrastructure.id
+>		
 >		INNER JOIN 
 >			Region AS sen_Sen_Infr_Infrastructure_Region 
 >			ON sen_Sen_Infr_Infrastructure.reg_id = sen_Sen_Infr_Infrastructure_Region.id
