@@ -36,6 +36,7 @@ MySQL Query (translated):
 >	SELECT sen.* FROM Sensor AS sen
 >	INNER JOIN 
 >   	Sen_Infr AS sen_Sen_Infr ON sen.id = sen_Sen_Infr.sen_id
+> 
 > 	INNER JOIN 
 >		Infrastructure AS sen_Sen_Infr_Infrastructure 
 >		ON sen_Sen_Infr.infr_id = sen_Sen_Infr_Infrastructure.id
