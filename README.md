@@ -1,4 +1,4 @@
-## Parser for Tippers (Testbed for IoT-based Privacy Preserving PERvasive SSpaces)
+## Parser for Tippers (Testbed for IoT-based Privacy Preserving PERvasive Spaces)
 
 Translate TQL into MySQL syntax
 
