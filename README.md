@@ -40,10 +40,11 @@ MySQL Query (translated):
 > 	INNER JOIN 
 >		Infrastructure AS sen_Sen_Infr_Infrastructure 
 >		ON sen_Sen_Infr.infr_id = sen_Sen_Infr_Infrastructure.id
->		
->		INNER JOIN 
+>
+>	INNER JOIN 
 >			Region AS sen_Sen_Infr_Infrastructure_Region 
->			ON sen_Sen_Infr_Infrastructure.reg_id = sen_Sen_Infr_Infrastructure_Region.id
+>			ON 
+>  sen_Sen_Infr_Infrastructure.reg_id = sen_Sen_Infr_Infrastructure_Region.id
 >
 > 	WHERE sen_Sen_Infr_Infrastructure_Region.floors = 3 ) 
 >	AS sensor_collection1 
