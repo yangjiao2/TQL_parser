@@ -11,7 +11,7 @@ Translate TQL into MySQL syntax
 3. Creating one final query
 
 ### Architecture
-
+![Architecture](https://github.com/yangjiao2/TQL_parser/blob/master/architecture.png)
 
 TQL query: 
 
@@ -46,7 +46,7 @@ MySQL Query (translated):
 >			ON 
 >  sen_Sen_Infr_Infrastructure.reg_id = sen_Sen_Infr_Infrastructure_Region.id
 >
-> 	WHERE sen_Sen_Infr_Infrastructure_Region.floors = 3 ) 
+> WHERE sen_Sen_Infr_Infrastructure_Region.floors = 3 ) 
 >	AS sensor_collection1 
 >
 >	ON (observation_collection1.sen_id = sensor_collection1.id)
