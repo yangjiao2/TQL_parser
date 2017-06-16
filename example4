@@ -1,0 +1,14 @@
+DEFINE SensorCollection sensor_collection1, sensor_collection2;
+
+DEFINE ObservationCollection observation_collection1, obs22;
+
+sensor_collection1 =
+SELECT sen.*
+FROM Sensor sen
+WHERE sen.location.x = 3 AND sen.platform.location.y = 4 AND sen.type.name = "Wifi" AND sen.type.id = "33";
+
+observation_collection1 = SENSORS_TO_OBSERVATIONS(sensor_collection1);
+
+SELECT obs.*
+FROM observation_collection1 obs
+WHERE obs.payload.platformId = 22;

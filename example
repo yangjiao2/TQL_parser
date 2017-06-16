@@ -1,0 +1,17 @@
+DEFINE SensorCollection sensor_collection1, sensor_collection2;
+
+DEFINE ObservationCollection observation_collection1, observation_collection2;
+
+sensor_collection1 =
+SELECT sen.*
+FROM Sensor sen, Infrastructure infr
+WHERE sen.location IN infr.region.geometry AND infr.region.floor=2;
+
+sensor_collection2 =
+SELECT sen2.*
+FROM sensor_collection1 sen2 WHERE sen2.type.name = "WiFi AP";
+
+observation_collection1 = SENSORS_TO_OBSERVATIONS(sensor_collection2);
+
+SELECT obs2.*
+FROM observation_collection1 obs2;

@@ -1,0 +1,12 @@
+DEFINE SensorCollection sensor_collection1;
+
+DEFINE ObservationCollection observation_collection1;
+
+sensor_collection1 = SELECT sen.* FROM Sensor sen;
+
+observation_collection1 = SENSORS_TO_OBSERVATIONS(sensor_collection1);
+
+SELECT COUNT(*)
+FROM observation_collection1 obs
+WHERE obs.type.name = "Some"
+GROUP BY obs.id;
